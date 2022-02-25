@@ -4,4 +4,8 @@
 
 <button (click)="showAlert()">Click me</button>
 
-<input type="text" [(&)]="nom">
+<input type="text" [(ngModel)]="nom">
+
+<hr>
+
+<app-child (msgToParent)="TraitementDuParent($event)" [isie]="nom_mastere"></app-child>
