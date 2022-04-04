@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <ol>
+            <li *ngFor="let rec of listRecrues" class="list-group-item">
+                <img src="../../assets/{{rec.avatar}}"> {{ rec.prenom }} {{ rec.nom |
+                titlecase}}
+            </li>
+        </ol>
+        <!-- <app-item *ngFor="let rec of listRecrues" [oneCandidat]="rec"></app-item> -->
+    </div>
+</div>

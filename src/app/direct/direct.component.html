@@ -1,8 +1,16 @@
-<div [ngStyle]="{
+<!-- <div [ngStyle]="{
     'backgroundColor' : bgColor,
     'color' : cl
 }">
     Exemple de ngStyle
+</div> -->
+
+<div [ngClass]="{
+    badis : c1,
+    nidhal : c2,
+    yassine : c3
+}">
+    Exemple de ngClass
 </div>
 
-JavaScriptObjectNormalize
+<button class="btn btn-danger" (click)="switchClass()">Switch</button>

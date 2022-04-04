@@ -1,0 +1,11 @@
+<div>
+    <label for="">Account Name</label>
+    <input #inName type="text" class="form-control">
+
+    <label for="">Status</label>
+    <select #selStatus class="form-control">
+        <option *ngFor="let s of tabStatus" [value]="s">{{s}}</option>
+    </select>
+    <br>
+    <button (click)="sendToList(inName.value, selStatus.value)" class="btn btn-primary">Add Account</button>
+</div>

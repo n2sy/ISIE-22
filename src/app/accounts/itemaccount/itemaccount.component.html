@@ -1,0 +1,9 @@
+<div class="nidhal">
+    <h4> {{ oneAccount.name }} </h4>
+    <hr>
+    <p> This account is {{ oneAccount.status }} </p>
+
+    <button (click)="changeStatus('active')" class="btn btn-success">Set to 'Active'</button>
+    <button (click)="changeStatus('inactive')" class="btn btn-danger">Set to 'Inactive'</button>
+    <button (click)="changeStatus('unknown')" class="btn btn-info">Set to 'Inknown'</button>
+</div>

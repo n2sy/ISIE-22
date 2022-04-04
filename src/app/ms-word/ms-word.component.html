@@ -1,0 +1,25 @@
+<div class="container">
+    <div [ngStyle]="{
+        backgroundColor : bgColor,
+        color : cl,
+        fontSize : fontSz,
+        fontFamily : fontFam
+    }">Mastere Isie </div>
+
+    <label for="">Background Color</label>
+    <input [(ngModel)]="bgColor" type="text" class="form-control">
+
+    <label for="">Text Color</label>
+    <input [(ngModel)]="cl" type="text" class="form-control">
+
+    <label for="">Font Size</label>
+    <input #sz (keyup)="ajouterUnite(sz.value)" type="number" class="form-control">
+
+    <label for="">Font </label>
+    <select [(ngModel)]="fontFam" class="form-control">
+        <option value=""></option>
+        <option value="Garamond">Garamond</option>
+        <option value="Arial">Arial</option>
+        <option value="Phosphate">Phosphate</option>
+    </select>
+</div>
