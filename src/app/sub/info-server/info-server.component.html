@@ -1,0 +1,9 @@
+<div class="container">
+    <strong> {{ selectedServeur.nom }} </strong>
+    <br>
+    <p>Le statut du serveur est {{ selectedServeur.statut }} </p>
+    <br>
+    <br>
+    <button (click)="goToEdit()" [disabled]="hd" class="btn btn-info">Editer</button><br>
+    <i *ngIf="hd">Impossible d'éditer ce serveur</i>
+</div>

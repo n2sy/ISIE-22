@@ -27,6 +27,8 @@ import { InfosComponent } from './infos/infos.component';
 import { AddComponent } from './add/add.component';
 import { UpdateComponent } from './update/update.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { SubModule } from './sub/sub.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -53,8 +55,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AddComponent,
     UpdateComponent,
     NotFoundComponent,
+    LoginComponent,
   ],
-  imports: [BrowserModule, FormsModule, ISIE_ROUTING],
+  imports: [BrowserModule, FormsModule, ISIE_ROUTING, SubModule],
   providers: [FirstService, SecondService],
   bootstrap: [AppComponent],
 })

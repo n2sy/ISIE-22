@@ -1,0 +1,39 @@
+<div class="container">
+    <form #f="ngForm" (ngSubmit)="showForm(f)">
+        <label for="login">Login</label>
+        <input #inpName="ngModel" ngModel required email type="text" class="form-control" id="login" name="login">
+
+        <div class="alert alert-danger" *ngIf="!inpName.valid && inpName.touched">Ce champ doit être une adresse-mail !
+        </div>
+        <label for="mdp">Mot de passe</label>
+        <input ngModel type="text" class="form-control" id="mdp" name="pwd">
+
+        <!-- <label for="section">Section</label>
+        <select [ngModel]="defaultSection" name="section" id="section" class="form-control">
+            <option value=""></option>
+            <option value="bi">BI</option>
+            <option value="isie">ISIE</option>
+            <option value="gestion">Gestion</option>
+        </select>
+
+        <label for="commentaire">Commentaire</label>
+        <textarea [(ngModel)]="myComment" name="comment" id="commentaire" cols="10" rows="5"
+            class="form-control"></textarea>
+
+        {{ myComment }}
+
+        <input #i="ngModel" required minlength="5" pattern="nidhal" ngModel type="text" class="form-control"
+            name="extras">
+        <div class="alert alert-danger" *ngIf="i.invalid && i.touched">
+            <p *ngIf="i.errors.required">Ce champ est obligatoire</p>
+            <p *ngIf="i.errors.minlength">La taille minimale est 5 caractères</p>
+            <p *ngIf="i.errors.pattern">Le pattern est "nidhal"</p>
+        </div> -->
+
+        <button [disabled]="f.invalid" class="btn btn-info">Se Connecter</button>
+        <!-- <button class="btn btn-danger" (click)="resetForm(f)">Reset</button>
+        <button class="btn btn-warning" (click)="randomPwd(f)">Random PWD</button>
+        <button class="btn btn-success" (click)="randomPwdII(f)">Random PWD II</button> -->
+        <!-- <button class="btn btn-danger" type="reset" (click)="resetForm(f)">Reset</button> -->
+    </form>
+</div>
